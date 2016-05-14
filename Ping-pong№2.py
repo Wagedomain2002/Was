@@ -5,13 +5,21 @@ ballx=100
 bally=100
 ballxspeed=-2
 ballyspeed=2
+sk=20
+ws=20
+ms=20
+t1=20
+t2=20
+t3=20
+x1=3
+x2=3
 def setup():
     global ballx,bally
     size(800,400)
     ballx=400
     bally=230
 def draw():
-    global ballx,bally,ballxspeed,ballyspeed,by,byt,bx
+    global ballx,bally,ballxspeed,ballyspeed,by,byt,bx,sk,ws,ms,t1,t2,t3,x1,x2
     fill(255,255,255)
     rect(0,0,800,800)
     fill(0,255,0)
@@ -19,6 +27,12 @@ def draw():
     fill(0,0,255)
     rect(137,by,10,75)
     fill(255,0,0)
+    rect(20,20,sk,sk)
+    rect(45,20,ws,ws)
+    rect(70,20,ms,ms)
+    rect(700,20,t1,t1)
+    rect(725,20,t2,t2)
+    rect(750,20,t3,t3)
     rect(650,byt,10,75)
     line(400,360,400,100)
     fill(78,33,45)
@@ -58,6 +72,22 @@ def draw():
         ballyspeed=0
         ballx=400
         bally=230
+    if ballx==70:
+        x1=x1-1
+    if ballx<=50 and x1==2:
+        sk=0
+    if ballx<=50 and x1==1:
+        ws=0
+    if ballx<=50 and x1==0:
+        ms=0
+    if ballx==730:
+        x2=x2-1
+    if ballx>=780 and x2==2:
+        t1=0
+    if ballx>=780 and x2==1:
+        t2=0
+    if ballx>=780 and x2==0:
+        t3=0
 #Create by Алексей Косько        
         
         
