@@ -53,13 +53,13 @@ def draw():
         if key =='p' and ballxspeed == 0 and ballyspeed ==0:
             ballyspeed=2
             ballxspeed=-2
-        if key == 'w' and by>=101:
+        if key == 'w' and by>=101 and ballxspeed<=0:
             by-=2
-        if key == 's' and by<=282:
+        if key == 's' and by<=282 and ballxspeed<=0:
             by+=2
-        if key == 't' and byt>=101:    
+        if key == 't' and byt>=101 and ballxspeed>=0:   
             byt-=2
-        if key == 'g' and byt<=282:
+        if key == 'g' and byt<=282 and ballxspeed>=0:
             byt+=2
         if key == 'r' and hw == 800:
             x1=3
